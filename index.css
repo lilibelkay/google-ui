@@ -88,7 +88,7 @@ input {
 }
 
 input:hover {
-    box-shadow: 0.1px 3px 1px rgba(201, 201, 201, 0.5);
+    box-shadow: 2px 2px 8px #888;
 }
 
 input:focus {
@@ -180,10 +180,47 @@ footer {
     text-align: center;
 }
 
+.panels {
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.panels > * {
+    flex-basis: 33%;
+}
+
 .ftr-right {
     justify-content: flex-end;
 }
 
 .leaf {
     width: 12px;
+}
+
+@media only screen and (max-width: 650px) {
+    .panels {
+        justify-content: space-evenly;
+        display: grid;
+        padding-top: 0;
+    }
+    .carbon {
+        order: 0;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    input {
+        width: 350px;
+    }
+    .cam {
+    width: 20px;
+    position: absolute;
+    top: 12px;
+    left: 310px;
+}
 }
